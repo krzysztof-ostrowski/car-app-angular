@@ -1,0 +1,13 @@
+<div class="container">
+  <h1 class="title">Available Cars</h1>
+  <a routerLink="/add" class="button link">Add a New Car</a>
+  <ul class="list">
+    <li *ngFor="let car of cars" class="item">
+      <span>{{ car.brand }} {{ car.model }} - {{ car.year }}</span>
+      <div>
+        <a [routerLink]="['/edit', car.id]" class="button link">Edit</a>
+        <button (click)="deleteCar(car.id)" class="button">Delete</button>
+      </div>
+    </li>
+  </ul>
+</div>

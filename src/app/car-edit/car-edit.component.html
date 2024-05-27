@@ -1,0 +1,19 @@
+<div class="container">
+  <h1 class="title">Edit Car Details</h1>
+  <form (ngSubmit)="updateCar()" class="form">
+    <label>
+      Brand:
+      <input type="text" [(ngModel)]="car.brand" name="brand" required />
+    </label>
+    <label>
+      Model:
+      <input type="text" [(ngModel)]="car.model" name="model" required />
+    </label>
+    <label>
+      Year:
+      <input type="number" [(ngModel)]="car.year" name="year" required />
+    </label>
+    <button type="submit" class="button">Update Car</button>
+    <a routerLink="/" class="link">Cancel</a>
+  </form>
+</div>
